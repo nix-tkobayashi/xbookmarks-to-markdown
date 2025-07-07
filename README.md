@@ -27,3 +27,13 @@ You can install this extension by loading it as an unpacked extension in Chrome 
 3.  Open your browser's extension management page (e.g., `chrome://extensions`).
 4.  Enable "Developer mode".
 5.  Click "Load unpacked" and select the `dist` directory from this project.
+
+# Privacy Policy
+
+This extension operates entirely on your local machine.
+
+- **Data Access**: The extension requests access to `https://x.com/i/bookmarks` to read your bookmark data for the sole purpose of exporting it.
+- **Data Storage**: No bookmark data, personal information, or browsing activity is ever stored, transmitted, or sent to any external server. All processing happens and stays in your browser.
+- **Downloads**: The "Export Bookmarks" feature uses the browser's `downloads` permission to save the generated `.zip` file directly to your computer. The extension does not access your download history.
+
+Your privacy is fully respected. The code is open-source and can be reviewed to verify these claims.
