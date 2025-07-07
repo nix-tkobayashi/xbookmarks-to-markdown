@@ -1,0 +1,27 @@
+{
+  "name": "xbookmarks-to-markdown",
+  "version": "1.0.0",
+  "main": "background.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nix-tkobayashi/xbookmarks-to-markdown.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nix-tkobayashi/xbookmarks-to-markdown/issues"
+  },
+  "homepage": "https://github.com/nix-tkobayashi/xbookmarks-to-markdown#readme",
+  "description": "",
+  "dependencies": {
+    "sharp": "^0.34.2"
+  },
+  "devDependencies": {
+    "jest": "^30.0.4",
+    "jszip": "^3.10.1"
+  }
+}

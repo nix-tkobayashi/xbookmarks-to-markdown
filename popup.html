@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>X Bookmarks to Markdown</title>
+  <link rel="stylesheet" type="text/css" href="popup.css">
+</head>
+<body>
+  <h1>X Bookmarks to Markdown</h1>
+
+  <div id="export-container">
+    <div class="date-range">
+      <label for="startDate">From:</label>
+      <input type="date" id="startDate">
+      <label for="endDate">To:</label>
+      <input type="date" id="endDate">
+    </div>
+    <button id="exportBtn">Export Bookmarks</button>
+    <div id="status"></div>
+  </div>
+
+  <div id="wrong-page-container" style="display: none;">
+    <p>Please navigate to the X bookmarks page to use this extension.</p>
+    <button id="navigateBtn">Go to Bookmarks</button>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
