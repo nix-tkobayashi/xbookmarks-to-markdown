@@ -4,7 +4,7 @@
   "main": "background.js",
   "scripts": {
     "test": "jest",
-    "build": "bestzip dist.zip dist/*"
+    "build": "bestzip artifacts.zip artifacts/*"
   },
   "repository": {
     "type": "git",

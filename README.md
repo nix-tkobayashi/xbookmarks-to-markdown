@@ -26,7 +26,7 @@ You can install this extension by loading it as an unpacked extension in Chrome 
 2.  If you downloaded a ZIP, extract it.
 3.  Open your browser's extension management page (e.g., `chrome://extensions`).
 4.  Enable "Developer mode".
-5.  Click "Load unpacked" and select the `dist` directory from this project.
+5.  Click "Load unpacked" and select the `artifacts` directory from this project.
 
 # Privacy Policy
 

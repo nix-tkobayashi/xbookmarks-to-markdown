@@ -2,7 +2,7 @@
 /node_modules
 
 # Build output
-/dist
+/artifacts/
 
 # Environment variables
 .env
@@ -16,3 +16,6 @@ yarn-error.log*
 # Optional editor directories
 .vscode
 .idea
+
+# Artifacts
+/.artifacts
