@@ -48,7 +48,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 
 async function handleGeneratedZip(markdownFiles) {
     // generateZip is now defined in zip-generator.js
-    const zipArrayBuffer = await generateZip(markdownFiles, JSZip);
+    const zipArrayBuffer = await generateZip(markdownFiles, JSZip, chrome);
     const zipBlob = new Blob([zipArrayBuffer]);
     
     const reader = new FileReader();
