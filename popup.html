@@ -5,22 +5,22 @@
   <link rel="stylesheet" type="text/css" href="popup.css">
 </head>
 <body>
-  <h1>X Bookmarks to Markdown</h1>
+  <h1 data-i18n="extName">X Bookmarks to Markdown</h1>
 
   <div id="export-container">
     <div class="date-range">
-      <label for="startDate">From:</label>
+      <label for="startDate" data-i18n="fromLabel">From:</label>
       <input type="date" id="startDate">
-      <label for="endDate">To:</label>
+      <label for="endDate" data-i18n="toLabel">To:</label>
       <input type="date" id="endDate">
     </div>
-    <button id="exportBtn">Export Bookmarks</button>
+    <button id="exportBtn" data-i18n="exportButton">Export Bookmarks</button>
     <div id="status"></div>
   </div>
 
   <div id="wrong-page-container" style="display: none;">
-    <p>Please navigate to the X bookmarks page to use this extension.</p>
-    <button id="navigateBtn">Go to Bookmarks</button>
+    <p data-i18n="wrongPageMessage">Please navigate to the X bookmarks page to use this extension.</p>
+    <button id="navigateBtn" data-i18n="navigateButton">Go to Bookmarks</button>
   </div>
 
   <script src="popup.js"></script>

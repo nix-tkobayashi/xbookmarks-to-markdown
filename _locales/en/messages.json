@@ -1,0 +1,44 @@
+{
+  "extName": {
+    "message": "X Bookmarks to Markdown"
+  },
+  "extDescription": {
+    "message": "Export your X bookmarks to Markdown."
+  },
+  "fromLabel": {
+    "message": "From:"
+  },
+  "toLabel": {
+    "message": "To:"
+  },
+  "exportButton": {
+    "message": "Export Bookmarks"
+  },
+  "wrongPageMessage": {
+    "message": "Please navigate to the X bookmarks page to use this extension."
+  },
+  "navigateButton": {
+    "message": "Go to Bookmarks"
+  },
+  "statusStarting": {
+    "message": "Starting export..."
+  },
+  "statusExportComplete": {
+    "message": "Export complete!"
+  },
+  "statusExportFailedNoData": {
+    "message": "Export failed. No data received."
+  },
+  "statusInjectFailed": {
+    "message": "Failed to inject script. Please reload the page and try again."
+  },
+  "statusWrongPage": {
+    "message": "Please navigate to x.com/i/bookmarks"
+  },
+  "statusScrapingFailed": {
+    "message": "Scraping failed. See console for details."
+  },
+  "statusNoBookmarks": {
+    "message": "No bookmarks found in the selected date range."
+  }
+}
