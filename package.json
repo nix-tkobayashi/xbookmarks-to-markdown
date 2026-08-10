@@ -4,7 +4,7 @@
   "main": "background.js",
   "scripts": {
     "test": "jest",
-    "build": "bestzip extension.zip manifest.json background.js content.js popup.html popup.js popup.css icons jszip.min.js zip-generator.js LICENSE"
+    "build": "bestzip extension.zip manifest.json background.js content.js popup.html popup.js popup.css icons _locales jszip.min.js zip-generator.js LICENSE"
   },
   "repository": {
     "type": "git",

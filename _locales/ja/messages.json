@@ -1,0 +1,44 @@
+{
+  "extName": {
+    "message": "X Bookmarks to Markdown"
+  },
+  "extDescription": {
+    "message": "XのブックマークをMarkdown形式でエクスポートします。"
+  },
+  "fromLabel": {
+    "message": "開始日:"
+  },
+  "toLabel": {
+    "message": "終了日:"
+  },
+  "exportButton": {
+    "message": "ブックマークをエクスポート"
+  },
+  "wrongPageMessage": {
+    "message": "この拡張機能を使うには、Xのブックマークページを開いてください。"
+  },
+  "navigateButton": {
+    "message": "ブックマークページを開く"
+  },
+  "statusStarting": {
+    "message": "エクスポートを開始しています..."
+  },
+  "statusExportComplete": {
+    "message": "エクスポートが完了しました！"
+  },
+  "statusExportFailedNoData": {
+    "message": "エクスポートに失敗しました。データを受信できませんでした。"
+  },
+  "statusInjectFailed": {
+    "message": "スクリプトの読み込みに失敗しました。ページを再読み込みして再試行してください。"
+  },
+  "statusWrongPage": {
+    "message": "x.com/i/bookmarks を開いてください"
+  },
+  "statusScrapingFailed": {
+    "message": "取得に失敗しました。詳細はコンソールを確認してください。"
+  },
+  "statusNoBookmarks": {
+    "message": "指定した期間にブックマークが見つかりませんでした。"
+  }
+}

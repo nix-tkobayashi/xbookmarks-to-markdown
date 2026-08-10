@@ -1,4 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
+  // Replace the English fallback texts with the browser-locale messages.
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const message = chrome.i18n.getMessage(el.dataset.i18n);
+    if (message) {
+      el.textContent = message;
+    }
+  });
+  document.title = chrome.i18n.getMessage('extName') || document.title;
+
   const exportContainer = document.getElementById('export-container');
   const wrongPageContainer = document.getElementById('wrong-page-container');
   const navigateBtn = document.getElementById('navigateBtn');
@@ -24,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const startDate = document.getElementById('startDate').value;
     const endDate = document.getElementById('endDate').value;
     
-    statusDiv.textContent = 'Starting export...';
+    statusDiv.textContent = chrome.i18n.getMessage('statusStarting');
 
     chrome.runtime.sendMessage({ 
       action: "startExport",

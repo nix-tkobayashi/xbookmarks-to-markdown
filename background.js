@@ -15,7 +15,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
         }, () => {
           if (chrome.runtime.lastError) {
             console.error("Failed to inject script:", chrome.runtime.lastError.message);
-            sendResponse({ status: "Failed to inject script. Please reload the page and try again." });
+            sendResponse({ status: chrome.i18n.getMessage('statusInjectFailed') });
             return;
           }
           // After injecting, send a message to the content script to start scraping
@@ -28,17 +28,17 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
               console.error("Error communicating with content script:", chrome.runtime.lastError.message);
             } else if (response && response.markdownFiles) {
               handleGeneratedZip(response.markdownFiles);
-              sendResponse({ status: "Export complete!" });
+              sendResponse({ status: chrome.i18n.getMessage('statusExportComplete') });
             } else if (response && response.status) {
                 sendResponse({ status: response.status });
             }
             else {
-               sendResponse({ status: "Export failed. No data received." });
+               sendResponse({ status: chrome.i18n.getMessage('statusExportFailedNoData') });
             }
           });
         });
       } else {
-        sendResponse({ status: "Please navigate to x.com/i/bookmarks" });
+        sendResponse({ status: chrome.i18n.getMessage('statusWrongPage') });
       }
     });
 
