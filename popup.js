@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Check the current tab's URL as soon as the popup opens.
   chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
     const currentTab = tabs[0];
-    if (currentTab && currentTab.url && currentTab.url.startsWith('https://x.com/i/bookmarks')) {
+    if (currentTab && isSupportedPageUrl(currentTab.url)) {
       // If we are on the correct page, show the export UI.
       exportContainer.style.display = 'block';
       wrongPageContainer.style.display = 'none';

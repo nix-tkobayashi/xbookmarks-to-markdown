@@ -1,5 +1,5 @@
 try {
-  importScripts('jszip.min.js', 'zip-generator.js');
+  importScripts('url-utils.js', 'jszip.min.js', 'zip-generator.js');
 } catch (e) {
   console.error(e);
 }
@@ -8,7 +8,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
   if (request.action === "startExport") {
     chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
       const activeTab = tabs[0];
-      if (activeTab && activeTab.url && activeTab.url.startsWith("https://x.com/i/bookmarks")) {
+      if (activeTab && isSupportedPageUrl(activeTab.url)) {
         chrome.scripting.executeScript({
           target: { tabId: activeTab.id },
           files: ["content.js"]
