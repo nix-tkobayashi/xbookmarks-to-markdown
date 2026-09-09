@@ -2,6 +2,8 @@
 
 A browser extension to export your bookmarks from X (formerly Twitter) into organized Markdown files.
 
+**Website:** https://nix-tkobayashi.github.io/xbookmarks-to-markdown/ ([日本語](https://nix-tkobayashi.github.io/xbookmarks-to-markdown/ja/)) — the page source lives in [`docs/`](docs/).
+
 ## Features
 
 - **Export by Date Range**: Select a "From" and "To" date to export only the bookmarks you need.

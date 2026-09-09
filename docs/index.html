@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>X Bookmarks to Markdown — export your X bookmarks as Markdown files</title>
+<meta name="description" content="A Chrome extension that exports your X (Twitter) bookmarks as plain Markdown files in a ZIP. Everything runs in your browser; nothing is uploaded.">
+<link rel="canonical" href="https://nix-tkobayashi.github.io/xbookmarks-to-markdown/">
+<link rel="alternate" hreflang="en" href="https://nix-tkobayashi.github.io/xbookmarks-to-markdown/">
+<link rel="alternate" hreflang="ja" href="https://nix-tkobayashi.github.io/xbookmarks-to-markdown/ja/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="X Bookmarks to Markdown">
+<meta property="og:description" content="Export your X bookmarks as plain Markdown files. Everything runs in your browser.">
+<meta property="og:url" content="https://nix-tkobayashi.github.io/xbookmarks-to-markdown/">
+<meta property="og:image" content="https://nix-tkobayashi.github.io/xbookmarks-to-markdown/assets/icon128.png">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="assets/icon128.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="./">
+      <img src="assets/icon128.png" alt="" width="26" height="26">
+      <span>X Bookmarks to Markdown</span>
+    </a>
+    <nav class="topnav" aria-label="Site">
+      <a href="#how">How it works</a>
+      <a href="#privacy">Privacy</a>
+      <a href="https://github.com/nix-tkobayashi/xbookmarks-to-markdown">GitHub</a>
+      <a class="lang" href="ja/" lang="ja" hreflang="ja">日本語</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-copy">
+        <h1>Bookmarks you saved.<br>Files you keep.</h1>
+        <p class="lede">X Bookmarks to Markdown turns your bookmarked posts into plain Markdown files — one file per post, packed into a ZIP you download. Drop the folder into Obsidian, Logseq, or any editor, and read it years from now without an account.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#install">Get the extension</a>
+          <a class="btn btn-ghost" href="https://github.com/nix-tkobayashi/xbookmarks-to-markdown">Read the source</a>
+        </div>
+        <dl class="specs">
+          <dt>version</dt><dd>1.6</dd>
+          <dt>browsers</dt><dd>Chrome and other Chromium browsers</dd>
+          <dt>languages</dt><dd>English and Japanese</dd>
+          <dt>license</dt><dd>MIT, source on GitHub</dd>
+        </dl>
+      </div>
+
+      <figure class="transform">
+        <div class="panel">
+          <div class="panel-head">x.com/i/bookmarks</div>
+          <div class="post">
+            <div class="post-author"><b>Field Notes</b> <span>@example_notes</span></div>
+            <p class="post-text">Kept this thread on spaced repetition to reread later. Bookmarks are where good links go to be forgotten.</p>
+            <div class="post-meta">
+              <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M6 2h12a1 1 0 0 1 1 1v19l-7-5-7 5V3a1 1 0 0 1 1-1z"/></svg>
+              14 Aug 2026
+            </div>
+          </div>
+        </div>
+
+        <svg class="arrow" viewBox="0 0 48 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="square">
+          <path d="M2 12h40"/><path d="M32 3l10 9-10 9"/>
+        </svg>
+
+        <div class="panel panel-md">
+          <div class="panel-head">Kept_this_thread_on_spaced_repetition_1955….md</div>
+<pre><span class="rule">---</span>
+<span class="k">Author:</span> Field Notes@example_notes
+<span class="k">Timestamp:</span> 2026-08-14T09:12:31.000Z
+<span class="k">URL:</span> https://x.com/example_notes/status/1955…
+<span class="rule">---</span>
+
+Kept this thread on spaced repetition to
+reread later. Bookmarks are where good
+links go to be forgotten.
+
+<span class="h">## Links</span>
+- https://t.co/8Kq2WdY1Ab</pre>
+        </div>
+
+        <figcaption>Front matter keeps the author, timestamp, and original URL, so every file still points home.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="band tint" id="how">
+    <div class="wrap">
+      <h2>Three steps, then it is on your disk</h2>
+      <p class="section-note">No account, no sign-in, no API key. The extension reads the page you already have open.</p>
+      <ol class="steps">
+        <li>
+          <h3>Open your bookmarks on X</h3>
+          <p>Go to <code>x.com/i/bookmarks</code>. The newer bookmark-tags page at <code>x.com/i/history</code> works too.</p>
+        </li>
+        <li>
+          <h3>Pick a date range</h3>
+          <p>Click the extension icon and set From and To. Leave them empty to take everything.</p>
+        </li>
+        <li>
+          <h3>Export</h3>
+          <p>The page scrolls itself to load every bookmark, then your browser saves <code>x-bookmarks.zip</code> wherever you choose.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="band" id="output">
+    <div class="wrap">
+      <h2>What is inside the ZIP</h2>
+      <p class="section-note">Text files and nothing else — no database, no proprietary format, no lock-in.</p>
+      <div class="output">
+        <pre class="tree"><b>x-bookmarks.zip</b>
+├── <b>index.md</b>      <span class="dim">links to all</span>
+├── Kept_this_thread…md
+├── The_best_paper_I…md
+└── Notes_from_the_ta…md</pre>
+        <dl class="facts">
+          <div>
+            <dt>One file per post</dt>
+            <dd>Named after the first words of the post plus its post ID, so two similar posts never overwrite each other.</dd>
+          </div>
+          <div>
+            <dt>Front matter</dt>
+            <dd>Author, timestamp, and the original x.com URL sit at the top of every file, ready for your notes app to index.</dd>
+          </div>
+          <div>
+            <dt>Media and links</dt>
+            <dd>Images, videos, and shortened links are collected under their own headings instead of being dropped.</dd>
+          </div>
+          <div>
+            <dt>index.md</dt>
+            <dd>A table of contents linking to each exported file, so the folder is readable the moment you unzip it.</dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <section class="band tint" id="privacy">
+    <div class="wrap">
+      <h2>What the extension can and cannot do</h2>
+      <p class="section-note">Three permissions, each with one job. The extension makes no network requests of its own, so your bookmarks never leave the machine.</p>
+      <table class="perms">
+        <caption>Permissions requested by version 1.6</caption>
+        <thead>
+          <tr><th scope="col">Permission</th><th scope="col">Why it is needed</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">activeTab</th>
+            <td>Reaches the tab you are looking at, only after you click the extension icon.</td>
+          </tr>
+          <tr>
+            <th scope="row">scripting</th>
+            <td>Runs the reader script on the bookmarks page to collect the posts shown there.</td>
+          </tr>
+          <tr>
+            <th scope="row">downloads</th>
+            <td>Hands the finished ZIP to your browser's download prompt. It never reads your download history.</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="pledge">Nothing is collected, stored, or sent anywhere. There is no analytics, no server, and no third party — the export is built in memory and discarded once the file is saved. <a href="privacy.html">Read the full privacy policy</a>.</p>
+    </div>
+  </section>
+
+  <section class="band" id="install">
+    <div class="wrap">
+      <h2>Install it</h2>
+      <p class="section-note">The Chrome Web Store listing is in review. Until it is published, load the extension yourself — it takes a minute.</p>
+      <div class="install-grid">
+        <div>
+          <h3>Load it unpacked</h3>
+          <ol>
+            <li>Download the latest <a href="https://github.com/nix-tkobayashi/xbookmarks-to-markdown/archive/refs/heads/main.zip">source ZIP</a> and unzip it.</li>
+            <li>Open <code>chrome://extensions</code> in your browser.</li>
+            <li>Turn on Developer mode.</li>
+            <li>Click Load unpacked and select the unzipped folder.</li>
+            <li>Pin the icon to your toolbar and open your bookmarks.</li>
+          </ol>
+        </div>
+        <div>
+          <h3>Before you export</h3>
+          <ol>
+            <li>Stay signed in to X — the extension reads the page as you see it.</li>
+            <li>Keep the bookmarks tab in front while it scrolls; it stops on its own.</li>
+            <li>Large libraries take a few minutes. The status line in the popup tells you when the ZIP is ready.</li>
+          </ol>
+        </div>
+        <div>
+          <h3>Something broken?</h3>
+          <ol>
+            <li>X changes its page markup often. If an export comes back empty, reload the bookmarks page and try once more.</li>
+            <li>Still stuck? <a href="https://github.com/nix-tkobayashi/xbookmarks-to-markdown/issues">Open an issue on GitHub</a> and say what you saw.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <span>MIT licensed. Built by <a href="https://github.com/nix-tkobayashi">nix-tkobayashi</a>.</span>
+    <nav aria-label="Footer">
+      <a href="https://github.com/nix-tkobayashi/xbookmarks-to-markdown">Source</a>
+      <a href="https://github.com/nix-tkobayashi/xbookmarks-to-markdown/issues">Issues</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="ja/" lang="ja" hreflang="ja">日本語</a>
+    </nav>
+  </div>
+</footer>
+</body>
+</html>

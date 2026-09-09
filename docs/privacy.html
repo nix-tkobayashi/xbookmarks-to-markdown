@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy policy — X Bookmarks to Markdown</title>
+<meta name="description" content="Privacy policy for the X Bookmarks to Markdown browser extension. No data is collected, stored, or transmitted; all processing happens in your browser.">
+<link rel="canonical" href="https://nix-tkobayashi.github.io/xbookmarks-to-markdown/privacy.html">
+<link rel="alternate" hreflang="en" href="https://nix-tkobayashi.github.io/xbookmarks-to-markdown/privacy.html">
+<link rel="alternate" hreflang="ja" href="https://nix-tkobayashi.github.io/xbookmarks-to-markdown/ja/privacy.html">
+<link rel="icon" href="assets/icon128.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="./">
+      <img src="assets/icon128.png" alt="" width="26" height="26">
+      <span>X Bookmarks to Markdown</span>
+    </a>
+    <nav class="topnav" aria-label="Site">
+      <a href="./#how">How it works</a>
+      <a href="./#install">Install</a>
+      <a href="https://github.com/nix-tkobayashi/xbookmarks-to-markdown">GitHub</a>
+      <a class="lang" href="ja/privacy.html" lang="ja" hreflang="ja">日本語</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="wrap prose">
+  <h1>Privacy policy</h1>
+  <p class="updated">Last updated 9 September 2026. Applies to version 1.6.</p>
+
+  <p>X Bookmarks to Markdown is a browser extension that exports your X (formerly Twitter) bookmarks as Markdown files. It runs entirely on your own machine.</p>
+
+  <h2>No data is collected</h2>
+  <ul>
+    <li>The extension does not collect, store, or transmit personal data, browsing history, or usage information.</li>
+    <li>There is no analytics, no telemetry, and no tracking of any kind.</li>
+    <li>The extension makes no network requests of its own and talks to no server, API, or third party.</li>
+  </ul>
+
+  <h2>How your bookmarks are handled</h2>
+  <ul>
+    <li>Bookmark data is read from the X page that is already open in your browser and processed in memory.</li>
+    <li>The generated Markdown files are packed into a ZIP and handed straight to your browser's download prompt.</li>
+    <li>Nothing is kept afterwards: the extension stores no bookmark data, and closing the tab discards everything.</li>
+    <li>The exported files belong to you and are saved only where you choose to save them.</li>
+  </ul>
+
+  <h2>Permissions</h2>
+  <table class="perms">
+    <thead>
+      <tr><th scope="col">Permission</th><th scope="col">Purpose and limits</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">activeTab</th>
+        <td>Grants access to the tab you are viewing, and only after you click the extension icon. Access ends when you leave the tab.</td>
+      </tr>
+      <tr>
+        <th scope="row">scripting</th>
+        <td>Injects the reader script into the bookmarks page so it can collect the posts displayed there. It runs on the active tab only, on <code>x.com/i/bookmarks</code> and <code>x.com/i/history</code>.</td>
+      </tr>
+      <tr>
+        <th scope="row">downloads</th>
+        <td>Saves the generated ZIP file through the browser's download function. Your download history and existing files are never read.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Third parties</h2>
+  <p>The extension bundles the open-source JSZip library to build the ZIP file locally. It integrates with no external service, shows no advertising, and shares nothing with anyone.</p>
+
+  <h2>Verifying these claims</h2>
+  <p>The complete source code is published under the MIT licence, so you do not have to take our word for it. Read <a href="https://github.com/nix-tkobayashi/xbookmarks-to-markdown">the repository</a>, or watch the network panel in your browser's developer tools during an export and confirm that no request leaves your machine.</p>
+
+  <h2>Changes to this policy</h2>
+  <p>If the extension's data practices ever change, this page changes with it, and the edit is visible in the repository's history.</p>
+
+  <h2>Contact</h2>
+  <p>Questions or concerns: <a href="https://github.com/nix-tkobayashi/xbookmarks-to-markdown/issues">open an issue on GitHub</a>.</p>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <span>MIT licensed. Built by <a href="https://github.com/nix-tkobayashi">nix-tkobayashi</a>.</span>
+    <nav aria-label="Footer">
+      <a href="./">Home</a>
+      <a href="https://github.com/nix-tkobayashi/xbookmarks-to-markdown">Source</a>
+      <a href="https://github.com/nix-tkobayashi/xbookmarks-to-markdown/issues">Issues</a>
+      <a href="ja/privacy.html" lang="ja" hreflang="ja">日本語</a>
+    </nav>
+  </div>
+</footer>
+</body>
+</html>

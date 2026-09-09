@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>X Bookmarks to Markdown — Xのブックマークを Markdown ファイルに</title>
+<meta name="description" content="X（旧Twitter）のブックマークを Markdown ファイルとして書き出す Chrome 拡張機能。処理はすべてブラウザ内で完結し、データはどこにも送信されません。">
+<link rel="canonical" href="https://nix-tkobayashi.github.io/xbookmarks-to-markdown/ja/">
+<link rel="alternate" hreflang="en" href="https://nix-tkobayashi.github.io/xbookmarks-to-markdown/">
+<link rel="alternate" hreflang="ja" href="https://nix-tkobayashi.github.io/xbookmarks-to-markdown/ja/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="X Bookmarks to Markdown">
+<meta property="og:description" content="Xのブックマークを Markdown ファイルとして書き出す拡張機能。処理はすべてブラウザ内で完結します。">
+<meta property="og:url" content="https://nix-tkobayashi.github.io/xbookmarks-to-markdown/ja/">
+<meta property="og:image" content="https://nix-tkobayashi.github.io/xbookmarks-to-markdown/assets/icon128.png">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="../assets/icon128.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=JetBrains+Mono:wght@400;600&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<a class="skip" href="#main">本文へ移動</a>
+
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="./">
+      <img src="../assets/icon128.png" alt="" width="26" height="26">
+      <span>X Bookmarks to Markdown</span>
+    </a>
+    <nav class="topnav" aria-label="サイト">
+      <a href="#how">使い方</a>
+      <a href="#privacy">プライバシー</a>
+      <a href="https://github.com/nix-tkobayashi/xbookmarks-to-markdown">GitHub</a>
+      <a class="lang" href="../" lang="en" hreflang="en">English</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-copy">
+        <h1>保存したブックマークを、<br>手元に残るファイルへ。</h1>
+        <p class="lede">X Bookmarks to Markdown は、ブックマークした投稿を1件1ファイルの Markdown に変換し、ZIP にまとめてダウンロードします。Obsidian や Logseq、好きなエディタにそのまま置けて、アカウントなしで何年後でも読めます。</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#install">拡張機能を入手する</a>
+          <a class="btn btn-ghost" href="https://github.com/nix-tkobayashi/xbookmarks-to-markdown">ソースコードを見る</a>
+        </div>
+        <dl class="specs">
+          <dt>version</dt><dd>1.6</dd>
+          <dt>browsers</dt><dd>Chrome ほか Chromium 系ブラウザ</dd>
+          <dt>languages</dt><dd>日本語・英語</dd>
+          <dt>license</dt><dd>MIT（ソースは GitHub で公開）</dd>
+        </dl>
+      </div>
+
+      <figure class="transform">
+        <div class="panel">
+          <div class="panel-head">x.com/i/bookmarks</div>
+          <div class="post">
+            <div class="post-author"><b>Field Notes</b> <span>@example_notes</span></div>
+            <p class="post-text">あとで読み返したくて、間隔反復についてのスレッドをブックマークした。ブックマークは、良いリンクが忘れられていく場所でもある。</p>
+            <div class="post-meta">
+              <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M6 2h12a1 1 0 0 1 1 1v19l-7-5-7 5V3a1 1 0 0 1 1-1z"/></svg>
+              2026年8月14日
+            </div>
+          </div>
+        </div>
+
+        <svg class="arrow" viewBox="0 0 48 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="square">
+          <path d="M2 12h40"/><path d="M32 3l10 9-10 9"/>
+        </svg>
+
+        <div class="panel panel-md">
+          <div class="panel-head">あとで読み返したくて、間隔反復についての…_1955.md</div>
+<pre><span class="rule">---</span>
+<span class="k">Author:</span> Field Notes@example_notes
+<span class="k">Timestamp:</span> 2026-08-14T09:12:31.000Z
+<span class="k">URL:</span> https://x.com/example_notes/status/1955…
+<span class="rule">---</span>
+
+あとで読み返したくて、間隔反復についての
+スレッドをブックマークした。ブックマークは、
+良いリンクが忘れられていく場所でもある。
+
+<span class="h">## Links</span>
+- https://t.co/8Kq2WdY1Ab</pre>
+        </div>
+
+        <figcaption>先頭のフロントマターに投稿者・投稿日時・元の URL が残るので、あとから元投稿へ戻れます。</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="band tint" id="how">
+    <div class="wrap">
+      <h2>3ステップで、手元のディスクに</h2>
+      <p class="section-note">アカウント登録もログインも API キーも不要です。いま開いているページをそのまま読み取ります。</p>
+      <ol class="steps">
+        <li>
+          <h3>ブックマークページを開く</h3>
+          <p><code>x.com/i/bookmarks</code> を開きます。ブックマークタグの新しいページ <code>x.com/i/history</code> にも対応しています。</p>
+        </li>
+        <li>
+          <h3>期間を指定する</h3>
+          <p>拡張機能のアイコンをクリックし、開始日と終了日を選びます。空のままにすればすべて書き出します。</p>
+        </li>
+        <li>
+          <h3>エクスポートする</h3>
+          <p>自動でページをスクロールしてすべてのブックマークを読み込み、<code>x-bookmarks.zip</code> を好きな場所に保存します。</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="band" id="output">
+    <div class="wrap">
+      <h2>ZIP の中身</h2>
+      <p class="section-note">中身はテキストファイルだけ。独自形式もデータベースもなく、あとから別のツールへ移せます。</p>
+      <div class="output">
+        <pre class="tree"><b>x-bookmarks.zip</b>
+├── <b>index.md</b>      <span class="dim">目次</span>
+├── あとで読み返したくて…md
+├── この論文がいちばん…md
+└── 打ち合わせのメモ…md</pre>
+        <dl class="facts">
+          <div>
+            <dt>1投稿 = 1ファイル</dt>
+            <dd>本文の冒頭と投稿 ID からファイル名を作るため、似た投稿どうしが上書きし合うことはありません。</dd>
+          </div>
+          <div>
+            <dt>フロントマター</dt>
+            <dd>投稿者・投稿日時・元の x.com URL を各ファイルの先頭に記録します。ノートアプリ側でそのまま索引できます。</dd>
+          </div>
+          <div>
+            <dt>画像・動画・リンク</dt>
+            <dd>投稿に含まれる画像や動画、短縮リンクは見出しごとにまとめて残します。</dd>
+          </div>
+          <div>
+            <dt>index.md</dt>
+            <dd>書き出したすべてのファイルへのリンク集。解凍した直後から目次として使えます。</dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <section class="band tint" id="privacy">
+    <div class="wrap">
+      <h2>この拡張機能ができること・できないこと</h2>
+      <p class="section-note">権限は3つだけで、それぞれ役割は1つです。拡張機能自身は通信を一切行わないため、ブックマークが端末の外に出ることはありません。</p>
+      <table class="perms">
+        <caption>バージョン 1.6 が要求する権限</caption>
+        <thead>
+          <tr><th scope="col">権限</th><th scope="col">必要な理由</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">activeTab</th>
+            <td>アイコンをクリックしたときだけ、いま見ているタブにアクセスします。</td>
+          </tr>
+          <tr>
+            <th scope="row">scripting</th>
+            <td>ブックマークページ上で読み取り用スクリプトを実行し、表示されている投稿を集めます。</td>
+          </tr>
+          <tr>
+            <th scope="row">downloads</th>
+            <td>できあがった ZIP をブラウザの保存ダイアログに渡します。ダウンロード履歴は読みません。</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="pledge">収集も保存も送信もしません。解析ツールもサーバーも第三者サービスも使わず、書き出しはメモリ上で組み立てて、保存が終われば破棄されます。<a href="privacy.html">プライバシーポリシー全文</a>もご覧ください。</p>
+    </div>
+  </section>
+
+  <section class="band" id="install">
+    <div class="wrap">
+      <h2>インストール</h2>
+      <p class="section-note">Chrome ウェブストアには申請中です。公開されるまでは、パッケージ化されていない拡張機能として読み込めば1分ほどで使えます。</p>
+      <div class="install-grid">
+        <div>
+          <h3>手動で読み込む</h3>
+          <ol>
+            <li>最新の<a href="https://github.com/nix-tkobayashi/xbookmarks-to-markdown/archive/refs/heads/main.zip">ソース ZIP</a> をダウンロードして展開します。</li>
+            <li>ブラウザで <code>chrome://extensions</code> を開きます。</li>
+            <li>「デベロッパー モード」をオンにします。</li>
+            <li>「パッケージ化されていない拡張機能を読み込む」で展開したフォルダを選びます。</li>
+            <li>アイコンをツールバーに固定し、ブックマークページを開きます。</li>
+          </ol>
+        </div>
+        <div>
+          <h3>使う前に</h3>
+          <ol>
+            <li>X にログインした状態で使ってください。画面に表示されている内容をそのまま読み取ります。</li>
+            <li>自動スクロール中はブックマークのタブを前面のままにしてください。読み込みが終われば自動で止まります。</li>
+            <li>件数が多いと数分かかります。完了はポップアップのステータス表示で分かります。</li>
+          </ol>
+        </div>
+        <div>
+          <h3>うまくいかないときは</h3>
+          <ol>
+            <li>X 側の画面構造は頻繁に変わります。何も書き出されないときは、ページを再読み込みしてもう一度試してください。</li>
+            <li>それでも解決しなければ、<a href="https://github.com/nix-tkobayashi/xbookmarks-to-markdown/issues">GitHub の Issue</a> で状況を教えてください。</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <span>MIT ライセンス。作者は <a href="https://github.com/nix-tkobayashi">nix-tkobayashi</a>。</span>
+    <nav aria-label="フッター">
+      <a href="https://github.com/nix-tkobayashi/xbookmarks-to-markdown">ソース</a>
+      <a href="https://github.com/nix-tkobayashi/xbookmarks-to-markdown/issues">Issue</a>
+      <a href="privacy.html">プライバシー</a>
+      <a href="../" lang="en" hreflang="en">English</a>
+    </nav>
+  </div>
+</footer>
+</body>
+</html>
