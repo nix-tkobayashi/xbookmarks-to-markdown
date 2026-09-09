@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Support — X Bookmarks to Markdown</title>
+<meta name="description" content="Help for the X Bookmarks to Markdown extension: fixes for empty or incomplete exports, and how to report a problem.">
+<link rel="canonical" href="https://nix-tkobayashi.github.io/xbookmarks-to-markdown/support.html">
+<link rel="alternate" hreflang="en" href="https://nix-tkobayashi.github.io/xbookmarks-to-markdown/support.html">
+<link rel="alternate" hreflang="ja" href="https://nix-tkobayashi.github.io/xbookmarks-to-markdown/ja/support.html">
+<link rel="icon" href="assets/icon128.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="./">
+      <img src="assets/icon128.png" alt="" width="26" height="26">
+      <span>X Bookmarks to Markdown</span>
+    </a>
+    <nav class="topnav" aria-label="Site">
+      <a href="./#how">How it works</a>
+      <a href="./#install">Install</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="https://github.com/nix-tkobayashi/xbookmarks-to-markdown">GitHub</a>
+      <a class="lang" href="ja/support.html" lang="ja" hreflang="ja">日本語</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="wrap prose">
+  <h1>Support</h1>
+  <p class="updated">For version 1.6. Questions go to GitHub issues.</p>
+
+  <p>Most failed exports come down to one of a handful of causes, and the fixes below take a minute. If none of them helps, the last section shows what to send so the problem can be tracked down.</p>
+
+  <h2>Start here</h2>
+  <ul>
+    <li>Sign in to X and open <code>x.com/i/bookmarks</code>, or <code>x.com/i/history</code> if that is where your bookmark tags live.</li>
+    <li>Keep that tab in front while the export runs. The extension scrolls the page to load your bookmarks, and a background tab may stop loading new ones.</li>
+    <li>Reload the page and run the export once more. A page that has been open for a long time is the most common cause of an empty result.</li>
+  </ul>
+
+  <h2>Common problems</h2>
+
+  <h3>"Please navigate to x.com/i/bookmarks"</h3>
+  <p>The extension runs on <code>https://x.com/i/bookmarks</code> and <code>https://x.com/i/history</code> only. Addresses on <code>twitter.com</code>, and any other page on X, are not supported. Open the bookmarks page itself and click the icon again.</p>
+
+  <h3>The export is empty, or misses posts you expected</h3>
+  <p>The date range filters on the date the post was written, not the day you bookmarked it. A post from 2023 that you bookmarked yesterday falls outside a range covering this week. Clear both date fields to export everything, then narrow down from there.</p>
+
+  <h3>It stops before reaching the end</h3>
+  <p>The extension scrolls the timeline itself and waits for X to deliver the next batch of posts. If the tab goes to the background, or the connection stalls, X stops sending posts and the export finishes early. Bring the tab to the front and run it again — re-exporting simply rebuilds the same files.</p>
+
+  <h3>Nothing is exported at all</h3>
+  <p>X changes the markup of its timeline regularly, and a change there can stop the reader script from recognising posts. Reload and retry first. If the result is still empty, that is a bug in the extension rather than a mistake on your side, so please report it.</p>
+
+  <h3>Images and videos are not in the ZIP</h3>
+  <p>Media is recorded as links to the originals on X, not downloaded. Images appear as Markdown image links under a <code>## Media</code> heading, and videos link back to the post. The files stay small, but the media stays on X.</p>
+
+  <h3>The filenames look cut off</h3>
+  <p>Each file is named after the first 50 characters of the post plus its post ID, and characters that Windows and macOS forbid in filenames are replaced with underscores. The full text is inside the file; only the name is shortened.</p>
+
+  <h3>The browser asks where to save every time</h3>
+  <p>That prompt is deliberate: the extension hands the ZIP to your browser and lets you choose the destination, rather than writing anywhere on its own.</p>
+
+  <h2>Report a problem</h2>
+  <p><a href="https://github.com/nix-tkobayashi/xbookmarks-to-markdown/issues">Open an issue on GitHub</a>. Copying this outline into the issue gives enough to reproduce it:</p>
+  <pre class="template"><b>Extension version:</b> 1.6
+<b>Browser and OS:</b>     e.g. Chrome on Windows 11
+<b>Page used:</b>          x.com/i/bookmarks or x.com/i/history
+<b>Date range:</b>         From and To, or left empty
+<b>What happened:</b>      what you expected, and what you got
+<b>Console errors:</b>     DevTools, Console tab, anything in red</pre>
+  <p>Please do not paste the contents of your bookmarks. Nothing about the posts themselves is needed to fix an export bug, and issues on GitHub are public.</p>
+
+  <h2>What to expect</h2>
+  <p>This is a free, MIT-licensed project maintained in spare time, so replies come when time allows. GitHub issues are the only support channel — there is no support address — which keeps every answer public, so the next person with the same problem can find it.</p>
+  <p>Feature requests and pull requests are welcome in the same place. The whole extension is a few hundred lines of JavaScript, so it is a small codebase to change.</p>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <span>MIT licensed. Built by <a href="https://github.com/nix-tkobayashi">nix-tkobayashi</a>.</span>
+    <nav aria-label="Footer">
+      <a href="./">Home</a>
+      <a href="https://github.com/nix-tkobayashi/xbookmarks-to-markdown">Source</a>
+      <a href="https://github.com/nix-tkobayashi/xbookmarks-to-markdown/issues">Issues</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="ja/support.html" lang="ja" hreflang="ja">日本語</a>
+    </nav>
+  </div>
+</footer>
+</body>
+</html>

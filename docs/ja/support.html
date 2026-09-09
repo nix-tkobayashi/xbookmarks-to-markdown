@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>サポート — X Bookmarks to Markdown</title>
+<meta name="description" content="X Bookmarks to Markdown のサポートページ。エクスポートが空になる・途中で止まるといった症状の対処方法と、不具合の報告方法をまとめています。">
+<link rel="canonical" href="https://nix-tkobayashi.github.io/xbookmarks-to-markdown/ja/support.html">
+<link rel="alternate" hreflang="en" href="https://nix-tkobayashi.github.io/xbookmarks-to-markdown/support.html">
+<link rel="alternate" hreflang="ja" href="https://nix-tkobayashi.github.io/xbookmarks-to-markdown/ja/support.html">
+<link rel="icon" href="../assets/icon128.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=JetBrains+Mono:wght@400;600&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<a class="skip" href="#main">本文へ移動</a>
+
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="./">
+      <img src="../assets/icon128.png" alt="" width="26" height="26">
+      <span>X Bookmarks to Markdown</span>
+    </a>
+    <nav class="topnav" aria-label="サイト">
+      <a href="./#how">使い方</a>
+      <a href="./#install">インストール</a>
+      <a href="privacy.html">プライバシー</a>
+      <a href="https://github.com/nix-tkobayashi/xbookmarks-to-markdown">GitHub</a>
+      <a class="lang" href="../support.html" lang="en" hreflang="en">English</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="wrap prose">
+  <h1>サポート</h1>
+  <p class="updated">対象バージョン 1.6 / お問い合わせは GitHub Issue へ</p>
+
+  <p>エクスポートがうまくいかない場合、原因はいくつかのパターンにほぼ絞られます。まずは以下の対処をお試しください。解決しない場合は、最後のセクションの内容を添えてご報告いただけると調査できます。</p>
+
+  <h2>最初に確認すること</h2>
+  <ul>
+    <li>X にログインした状態で <code>x.com/i/bookmarks</code>（ブックマークタグを使っている場合は <code>x.com/i/history</code>）を開いてください。</li>
+    <li>エクスポート中はそのタブを前面のままにしてください。ページを自動スクロールして読み込む仕組みのため、バックグラウンドのタブでは追加の読み込みが止まることがあります。</li>
+    <li>ページを再読み込みしてからもう一度実行してください。長時間開いたままのページは、結果が空になる原因として最も多いものです。</li>
+  </ul>
+
+  <h2>よくある症状</h2>
+
+  <h3>「x.com/i/bookmarks を開いてください」と表示される</h3>
+  <p>この拡張機能が動作するのは <code>https://x.com/i/bookmarks</code> と <code>https://x.com/i/history</code> のみです。<code>twitter.com</code> のアドレスや X の他のページでは動きません。ブックマークページ自体を開いた状態でアイコンをクリックしてください。</p>
+
+  <h3>結果が空になる、一部の投稿が入らない</h3>
+  <p>期間の絞り込みは<strong>投稿された日付</strong>が基準で、ブックマークした日ではありません。2023年の投稿を昨日ブックマークした場合、「今週」の範囲を指定すると対象外になります。まず開始日・終了日を両方とも空にして全件書き出し、そこから絞り込むのがおすすめです。</p>
+
+  <h3>途中で止まる</h3>
+  <p>拡張機能はタイムラインを自動スクロールし、X が次の投稿群を返すのを待ちます。タブがバックグラウンドに回ったり通信が滞ったりすると、X からの配信が止まり、その時点でエクスポートが終わります。タブを前面に戻して実行し直してください。再実行しても同じファイルが作り直されるだけで、二重に増えることはありません。</p>
+
+  <h3>まったく書き出されない</h3>
+  <p>X の画面構造は頻繁に変わり、その変化で読み取り用スクリプトが投稿を認識できなくなることがあります。まず再読み込みと再試行をお願いします。それでも空のままなら拡張機能側の不具合ですので、ご報告ください。</p>
+
+  <h3>画像や動画が ZIP に入っていない</h3>
+  <p>メディアは X 上の元ファイルへのリンクとして記録され、ダウンロードはされません。画像は <code>## Media</code> 見出しの下に Markdown の画像リンクとして、動画は元の投稿へのリンクとして残ります。ファイルは軽いままですが、メディア本体は X 側にあります。</p>
+
+  <h3>ファイル名が途中で切れている</h3>
+  <p>ファイル名は本文の先頭50文字と投稿 ID から作られ、Windows や macOS で使えない文字はアンダースコアに置き換えられます。本文は全文がファイルの中に入っており、短くなっているのは名前だけです。</p>
+
+  <h3>毎回保存先を聞かれる</h3>
+  <p>これは意図した挙動です。拡張機能は ZIP をブラウザに渡して保存先を選んでもらう方式で、勝手にどこかへ書き込むことはありません。</p>
+
+  <h2>不具合を報告する</h2>
+  <p><a href="https://github.com/nix-tkobayashi/xbookmarks-to-markdown/issues">GitHub の Issue</a> からご報告ください。以下の項目を書き写していただけると、再現の手がかりになります。</p>
+  <pre class="template"><b>拡張機能のバージョン:</b> 1.6
+<b>ブラウザと OS:</b> 例）Windows 11 の Chrome
+<b>使用したページ:</b> x.com/i/bookmarks または x.com/i/history
+<b>指定した期間:</b> 開始日・終了日、または未指定
+<b>起きたこと:</b> 期待した結果と、実際に起きたこと
+<b>コンソールのエラー:</b> DevTools のコンソールに出た赤い文字</pre>
+  <p>ブックマークの本文そのものは貼らないでください。エクスポートの不具合を直すのに投稿の内容は不要で、GitHub の Issue は公開されます。</p>
+
+  <h2>対応について</h2>
+  <p>MIT ライセンスの個人プロジェクトを空き時間で運営しているため、返信までお時間をいただくことがあります。上記の情報が揃った報告がいちばん早く修正につながります。窓口は GitHub Issue のみで、サポート用のメールアドレスは用意していません。やり取りが公開の場に残るので、同じ問題に当たった方が答えを見つけられます。</p>
+  <p>機能の要望やプルリクエストも同じ場所で歓迎しています。拡張機能全体で数百行の JavaScript なので、手を入れやすい規模です。</p>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <span>MIT ライセンス。作者は <a href="https://github.com/nix-tkobayashi">nix-tkobayashi</a>。</span>
+    <nav aria-label="フッター">
+      <a href="./">ホーム</a>
+      <a href="https://github.com/nix-tkobayashi/xbookmarks-to-markdown">ソース</a>
+      <a href="https://github.com/nix-tkobayashi/xbookmarks-to-markdown/issues">Issue</a>
+      <a href="privacy.html">プライバシー</a>
+      <a href="../support.html" lang="en" hreflang="en">English</a>
+    </nav>
+  </div>
+</footer>
+</body>
+</html>

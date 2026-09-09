@@ -435,6 +435,28 @@ h2 {
   margin: 0 0 2.4rem;
 }
 .prose h2 { font-size: 1.25rem; margin: 2.4rem 0 .6rem; }
+.prose h3 { font-size: 1.02rem; letter-spacing: -.015em; margin: 1.9rem 0 .4rem; }
+.prose code {
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+  font-size: .84em;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  padding: .05em .3em;
+}
+.prose pre.template {
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+  font-size: .8rem;
+  line-height: 1.9;
+  margin: 1rem 0 0;
+  padding: 1rem 1.1rem;
+  background: var(--surface);
+  border: 1px solid var(--line-strong);
+  border-radius: 3px;
+  overflow-x: auto;
+  color: var(--ink-soft);
+}
+.prose pre.template b { color: var(--ink); font-weight: 600; }
 .prose p { color: var(--ink-soft); }
 .prose ul { color: var(--ink-soft); padding-left: 1.1rem; }
 .prose li { margin-bottom: .4rem; }
