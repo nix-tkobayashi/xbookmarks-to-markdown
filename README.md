@@ -4,6 +4,8 @@ A browser extension to export your bookmarks from X (formerly Twitter) into orga
 
 **Website:** https://nix-tkobayashi.github.io/xbookmarks-to-markdown/ ([日本語](https://nix-tkobayashi.github.io/xbookmarks-to-markdown/ja/)) — the page source lives in [`docs/`](docs/).
 
+**Author:** [nix-tkobayashi](https://github.com/nix-tkobayashi) — on X as [@\_\_\_nix\_\_\_](https://x.com/___nix___). Bug reports go to [issues](https://github.com/nix-tkobayashi/xbookmarks-to-markdown/issues); releases are announced on X.
+
 ## Features
 
 - **Export by Date Range**: Select a "From" and "To" date to export only the bookmarks you need.

@@ -463,6 +463,16 @@ h2 {
 .prose a { color: var(--violet); }
 .prose .perms { margin-top: 1rem; }
 
+/* The X handle is wrapped in underscores, which collide with a link
+   underline or border. Push the rule clear of the glyphs. */
+a.handle {
+  font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: .92em;
+  letter-spacing: .05em;
+  text-underline-offset: .32em;
+  padding-bottom: .14em;
+}
+
 /* ---------- footer ---------- */
 
 .foot {
